@@ -16,8 +16,9 @@ function Button(props) {
 
 export default function Cvapp() {
 
-    const [fName, setFname] = useState('');
-    const [sName, setSname] = useState();
+    const [basicDetails , setBasicDetails] = useState({fname:'',sName:'',email:'',phone:''});
+    const [eduDetails , setEduDetails] = useState({school:'',study:'',year:'',score:''});
+    const [expDetails , setExpDetails] = useState({company:'',position:'',work:'',from:'',to:''});
 
 
     return (
@@ -69,6 +70,10 @@ export default function Cvapp() {
                 <input  type='text'placeholder='Year'></input>
             </div>
 
+            <div>
+                <input  type='text'placeholder='Score'></input>
+            </div>
+
 
             <div><p>Experience details</p></div>
 
@@ -110,23 +115,25 @@ export default function Cvapp() {
 
             <div><span>NAME : </span><br /><h1>{fName}</h1></div>
             <div><span>SURNAME : </span><br /><h1>{sName}</h1></div>
-            <div><span>SURNAME : </span><br /><h1>{sName}</h1></div>
-            <div><span>SURNAME : </span><br /><h1>{sName}</h1></div>
+            <div><span>Email : </span><br /><h1>{sName}</h1></div>
+            <div><span>Phone : </span><br /><h1>{sName}</h1></div>
 
             <div><p>Education Details</p></div>
 
-            <div><span>SURNAME : </span><br /><h1>{sName}</h1></div>
-            <div><span>SURNAME : </span><br /><h1>{sName}</h1></div>
-            <div><span>SURNAME : </span><br /><h1>{sName}</h1></div>
-            <div><span>SURNAME : </span><br /><h1>{sName}</h1></div>
+            <div><span>School Name : </span><br /><h1>{sName}</h1></div>
+            <div><span>Title of Study : </span><br /><h1>{sName}</h1></div>
+            <div><span>Year : </span><br /><h1>{sName}</h1></div>
+            <div><span>Score : </span><br /><h1>{sName}</h1></div>
 
 
             <div><p>Experience Details</p></div>
 
-            <div><span>SURNAME : </span><br /><h1>{sName}</h1></div>
-            <div><span>SURNAME : </span><br /><h1>{sName}</h1></div>
-            <div><span>SURNAME : </span><br /><h1>{sName}</h1></div>
-            <div><span>SURNAME : </span><br /><h1>{sName}</h1></div>
+            <div><span>company name : </span><br /><h1>{sName}</h1></div>
+            <div><span>position title : </span><br /><h1>{sName}</h1></div>
+            <div><span>responsibilities : </span><br /><h1>{sName}</h1></div>
+            <div><span>from : </span><br /><h1>{sName}</h1></div>
+            <div><span>TO : </span><br /><h1>{sName}</h1></div>
+
 
 
 
