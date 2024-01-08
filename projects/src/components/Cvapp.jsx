@@ -16,9 +16,9 @@ function Button(props) {
 
 export default function Cvapp() {
 
-    const [basicDetails , setBasicDetails] = useState({fname:'',sName:'',email:'',phone:''});
-    const [eduDetails , setEduDetails] = useState({school:'',study:'',year:'',score:''});
-    const [expDetails , setExpDetails] = useState({company:'',position:'',work:'',from:'',to:''});
+    const [basicDetails, setBasicDetails] = useState({ fname: '', sName: '', email: '', phone: '' });
+    const [eduDetails, setEduDetails] = useState({ school: '', study: '', year: '', score: '' });
+    const [expDetails, setExpDetails] = useState({ company: '', position: '', work: '', from: '', to: '' });
 
 
     return (
@@ -30,26 +30,30 @@ export default function Cvapp() {
 
             <div><p>basic details</p></div>
             <div><input type='text' placeholder='Name' onChange={(event) => {
-                setFname(event.target.value)
+                const set = {...basicDetails,fname:event.target.value}
+                setBasicDetails(set)
             }
             }></input></div>
 
 
             <div><input type='text' placeholder='Surname' onChange={(event) => {
-                setSname(event.target.value)
+                const set = {...basicDetails,sName:event.target.value}
+                setBasicDetails(set)
             }
             }></input></div>
 
 
 
             <div><input type='text' placeholder='Email' onChange={(event) => {
-                setFname(event.target.value)
+                const set = {...basicDetails,email:event.target.value}
+                setBasicDetails(set)
             }
             }></input></div>
 
 
             <div><input type='text' placeholder='Phone' onChange={(event) => {
-                setFname(event.target.value)
+                const set = {...basicDetails,phone:event.target.value}
+                setBasicDetails(set)
             }
             }></input></div>
 
@@ -67,11 +71,11 @@ export default function Cvapp() {
             </div>
 
             <div>
-                <input  type='text'placeholder='Year'></input>
+                <input type='text' placeholder='Year'></input>
             </div>
 
             <div>
-                <input  type='text'placeholder='Score'></input>
+                <input type='text' placeholder='Score'></input>
             </div>
 
 
@@ -113,26 +117,26 @@ export default function Cvapp() {
 
             <div><p>Basic Details</p></div>
 
-            <div><span>NAME : </span><br /><h1>{fName}</h1></div>
-            <div><span>SURNAME : </span><br /><h1>{sName}</h1></div>
-            <div><span>Email : </span><br /><h1>{sName}</h1></div>
-            <div><span>Phone : </span><br /><h1>{sName}</h1></div>
+            <div><span>NAME : </span><br /><h1>{basicDetails.fname}</h1></div>
+            <div><span>SURNAME : </span><br /><h1>{basicDetails.sName}</h1></div>
+            <div><span>Email : </span><br /><h1>{basicDetails.email}</h1></div>
+            <div><span>Phone : </span><br /><h1>{basicDetails.phone}</h1></div>
 
             <div><p>Education Details</p></div>
 
-            <div><span>School Name : </span><br /><h1>{sName}</h1></div>
-            <div><span>Title of Study : </span><br /><h1>{sName}</h1></div>
-            <div><span>Year : </span><br /><h1>{sName}</h1></div>
-            <div><span>Score : </span><br /><h1>{sName}</h1></div>
+            <div><span>School Name : </span><br /><h1>{}</h1></div>
+            <div><span>Title of Study : </span><br /><h1>{}</h1></div>
+            <div><span>Year : </span><br /><h1>{}</h1></div>
+            <div><span>Score : </span><br /><h1>{}</h1></div>
 
 
             <div><p>Experience Details</p></div>
 
-            <div><span>company name : </span><br /><h1>{sName}</h1></div>
-            <div><span>position title : </span><br /><h1>{sName}</h1></div>
-            <div><span>responsibilities : </span><br /><h1>{sName}</h1></div>
-            <div><span>from : </span><br /><h1>{sName}</h1></div>
-            <div><span>TO : </span><br /><h1>{sName}</h1></div>
+            <div><span>company name : </span><br /><h1>{}</h1></div>
+            <div><span>position title : </span><br /><h1>{}</h1></div>
+            <div><span>responsibilities : </span><br /><h1>{}</h1></div>
+            <div><span>from : </span><br /><h1>{}</h1></div>
+            <div><span>TO : </span><br /><h1>{}</h1></div>
 
 
 
