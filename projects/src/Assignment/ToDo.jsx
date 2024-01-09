@@ -19,19 +19,30 @@ export default function ToDo() {
 
     function handleAdd() {
         const text = document.getElementById('tasks').value
-        setTasks([...getTasks, text]);
+        if (text == "") {
+            document.getElementById('warn').innerText = "Cannot add Empty Text"
+        }
+        else{
+        setTasks([...getTasks, text]);}
 
 
 
     }
 
-    const dataMap = getTasks.map((a) => 
+    function handleClear() {
+        document.getElementById('tasks').value = ""
+    }
+
+    const dataMap = getTasks.map((a) =>
         <li key={a}>{a} <span><Button text="delete" type="submit" /></span> <span><Button text="Edit" type="submit" /></span></li>)
 
     return (
         <>
             <div><Input type="text" id="tasks" holder="Add task" /></div>
-            <div><Button type="Submit" text="Add" action={handleAdd} /></div>
+            <div id="warn"></div>
+
+            <div><span>  <Button type="Submit" text="Add" action={handleAdd} /></span> <span><Button type="Submit" text="Clear" action={handleClear} /></span>   </div>
+
 
             <div> <p>Tasks to be done </p></div>
             <div>
