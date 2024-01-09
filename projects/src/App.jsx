@@ -4,13 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Cvapp from './components/Cvapp'
 import Assignment1 from './Assignment/Assignment1'
+import ToDo from './Assignment/ToDo'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <Cvapp />
+    <ToDo />
     </>
   )
 }
