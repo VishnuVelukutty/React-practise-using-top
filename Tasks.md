@@ -1,3 +1,9 @@
+### To do 
+1. Don't allow empty inputs
+2. delete and edit 
+3. task completed tick
+
+
 ### Resume maker
 
 1. This works similar to hackerrank resume maker
