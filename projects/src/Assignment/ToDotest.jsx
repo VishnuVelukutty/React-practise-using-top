@@ -1,5 +1,5 @@
 import { useState } from "react"
-export default function ToDo() {
+export default function ToDotest() {
 
     const [getTasks, setTasks] = useState([]);
 
@@ -19,7 +19,7 @@ export default function ToDo() {
     function NewTask(){
 
         const dataMap = getTasks.map((a) =>
-        <li key={a}>{a} <span><Button text="delete" type="submit" /></span> <span><Button text="Edit" type="submit" /></span></li>)
+        <li key={a.id}>{a.task} <span><Button text="delete" type="submit" /></span> <span><Button text="Edit" type="submit" /></span></li>)
         return (
             <ol> {dataMap}
             </ol>
@@ -33,7 +33,15 @@ export default function ToDo() {
             document.getElementById('warn').innerText = "Cannot add Empty Task"
         }
         else{
-        setTasks([...getTasks, text]);}
+ /*            const addTask = ([{...getTasks, task:text,id:getTasks.id++}]) 
+        setTasks(addTask); 
+        // EDITS DATA ON THE SAME TASK
+        
+        */
+
+        const newTask = { id: getTasks.length, task: text }; // Creating a new task object
+        setTasks([...getTasks, newTask]);
+    }
 
 
 
