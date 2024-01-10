@@ -43,6 +43,15 @@ export default function ToDo() {
         document.getElementById('tasks').value = ""
     }
 
+
+    function handleDelete(){
+
+    }
+
+    function handleEdit(){
+               
+    }
+
    
 
     return (
